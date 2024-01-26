@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Talent Beacon</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="icon" href="img/blacklogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    html{
+        scroll-behavior: smooth;
+    }
+        .owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.owl-nav button.owl-prev {
+  left: 0;
+}
+.owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #a10000;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: lightgray !important;
+}
+.owl-dots span {
+    font-size: 70px;    
+    position: relative;
+    top: -5px;
+}
+.owl-nav button:focus {
+    outline: none;
+}
+.clients_section .owl-carousel .owl-dots{
+    display: none;
+}
+
+
+
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  /* border: 1px solid gray; */
+  border-radius: 4px;
+  padding: 0px 30px 0px 20px;
+  /* background-color: #ffffff; */
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+  right:10%
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+  z-index:1;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+.child-ul{
+    position: relative;
+    right: 50px;
+    padding-left: 65px;
+}
+nav ul li ul li a {
+    text-align: right;
+    font-size: 12px;
+}
+.slimmenu-01 li ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    /* background-color: #69b6d5; */
+    border: 1px solid #a10000;
+    position: absolute;
+    right: -6px;
+    top: 15px;
+}
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  padding: 7px;
+  font-size: 19px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width:250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:99;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+.nav-position{
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+}
+.fixed {
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+  background: #fff;}
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgb(0 0 0);
+    font-weight: bold;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(0 0 0);
+}
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: rgb(0 0 0);
+}
+/* .header-pad{
+    padding: 0 45px;
+} */
+.navbar-brand img{
+    width: 50%;
+}
+
+    </style>
+</head>
+<body>
+    <div id="home">
+        <nav class="navbar navbar-expand-lg navbar-dark nav-position sticky-top">
+          <div class="container header-pad">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-md-auto gap-2">
+                <li class="nav-item rounded">
+                  <a class="nav-link active" aria-current="page" href="#home"><i class="bi bi-house-fill me-2"></i>HOME</a>
+                </li>
+                <li class="nav-item rounded">
+                  <div class="dropdown">
+                  <a class="nav-link active dropbtn" aria-current="page" href="#about"><i class="bi bi-house-fill me-2"></i>ABOUT</a>
+                    <!-- <button class="dropbtn">ABOUT</button> -->
+                    <div class="dropdown-content">
+                      <a href="#india">India Based Recruitment Support</a>
+                      <a href="#new">New Company Setup</a>
+                      <a href="#tech">Technology and Engagement Models</a>
+                      <a href="#hr">HR Consulting, Employer of Record and
+                        Payrolling Services</a>
+                      <a href="#supp">Supplemental Service</a>
+                      <a href="#client">Representative Clients</a>
+                      <a href="#leader">Leadership</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item rounded">
+                  <a class="nav-link" href="#work"><i class="bi bi-people-fill me-2"></i>BLOGS</a>
+                </li>
+                <li class="nav-item rounded">
+                  <a class="nav-link" href="#contact"><i class="bi bi-telephone-fill me-2"></i>CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- <div class="logo"></div> -->
+        <div class="home-small-text heading">We Offer</div>
+        <div class="home-big-text ">Talent Acquisition & <br> Management Solution</div>
+        
+        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="images/1.jpg" style="height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;"> 
+            <!-- <source src="videos/video.webm" type="video/webm">  -->
+            <source src="img/Video.mp4" type="video/mp4"> 
+            <!-- <source src="videos/video.ogg" type="video/ogg">  -->
+        </video>
+      </div>
+
+
+
+    <div class="container section1" id="about">
+        <h1 class="text-center heading">We Are</h1>
+        <div class="row">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12">
+                <div class="row section1_row mt-4">
+                <div class="col-lg-6">
+                    <h5 class=" text-center"><span  style="background-color: #932e32;color: #fff;padding: 12px;">GLOBAL PARTNERS</span></h5>
+                    <ul class=" mt-4">
+                        <li>India based recruitment support.</li>
+                        <li class="mt-4">India based new company setup for global
+                            companies <br>coming to India.</li>
+                        <li class="mt-4"> India based contract labor, retained search, <br>and
+                            Employer of Record and Payrolling services.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class=" text-center"><span  style="background-color: #932e32;color: #fff;padding: 12px;">OUR EXPERIENCE</span></h5>
+                    <p class="mt-4 " style="text-align: justify;line-height: 20px;">Over a decade worth of experience working with major multinational
+                      companies, mid-size growth companies, and fast-growing startups who
+                      have depended on TalentBeacon for partnership-based hiring support
+                      and extensive experienced hiring and managing talent in India.
+                        </p>
+                  <p style="line-height: 20px;">TalentBeacon's clients are a some of the best known global multinational
+                    corporations, as well as global and regional staffing companies, that
+                    work with us as a long-term trust partner for supplemental or fully
+                    outsourced recruitment, New company setup, and HR and Employer of
+                    Record consulting and support services.</p>
+                </div>
+            </div></div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>
+        
+    </div>
+
+    <!----------------------banner1-------------------->
+    <div class="banner1" style="background-image:url(img/bg-1.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+
+    <div class="container section2" id="india">
+        <div class="row">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12">
+        <h1 class="text-center heading"  >India Based Recruitment Support</h1>
+        <div class="mt-3 ">
+          <ul>
+            <li>We do full and partial Recruitment Process Outsourcing (RPO) services, bringing a high-end corporate
+              approach where most India firms work in a very transactional agency recruiting model.</li>
+            <li class="mt-4">We have significant experience hiring and managing contractors in support of our client’s contingent labor
+              requirements, either directly or through 3rd party MSA service management companies.</li>
+            <li class="mt-4">We support recruiting in international locations from India, with extensive experience servicing the Americas,
+              EMEA, and the Indo-Asia regions.</li>
+            <li class="mt-4"> We are deeply experienced in project based and longer term optimized RPO solution design, as well as execution oversight and metrics-based
+              delivery management.</li>
+            <li class="mt-4"> TalentBeacon also has experience implementing innovative supplemental IT interviewing and scalable screening services into solutions designs.</li>
+          </ul>
+          </div>
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>        
+    </div>
+
+    <!----------------------banner2-------------------->
+    <div class="banner2" style="background-image:url(img/Group\ 156.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+        <div class="container section3" id="new">
+            <div class="row">
+                <!-- <div class="col-lg-1"></div> -->
+                <div class="col-lg-12">
+                   <h1 class="text-center heading">New Company Setup</h1>
+                   <div class="mt-3 ">
+                    <ul>
+                      <li>TalentBeacon is one of the leading providers of “New Company Setup” services in India. Over the past decade,
+                        numerous international corporations have partnered with TalentBeacon successfully to enter the India
+                        market.</li>
+                      <li class="mt-4">From growth companies to large multinationals, TalentBeacon has been a trusted, hands-on, and cost effective partner. When practical, firsthand experience is required to ensure that a new organization first year
+                        in India is successful, TalentBeacon’s is you best choice for ensuring a successful first 12 to 24 months.</li>
+                      <li class="mt-4">We have comprehensive HR, Legal, Recruiting, Location selection and In-House Employer of Record and Payrolling experience to help companies
+                        avoid big consultancy setup costs, while ensuring that mission critical decisions, project planning, and deliverables execution are being managed
+                        with experienced insights, best practices, and risk avoidance discipline.</li>
+                    </ul>
+                      </div>
+                </div>
+                <!-- <div class="col-lg-1"></div> -->
+            </div>
+        </div>
+
+
+    <!----------------------banner3-------------------->
+    <div class="banner3" style="background-image:url(img/Mask\ Group\ 16.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+
+    <div class="container section4" id="tech">
+        <div class="row">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12">
+                <h1 class="text-center heading">Technology and Engagement Models</h1>
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                      <h6 style="text-align: center;background-color: #932e32;color: #fff;padding: 12px;"><span style="font-size: 19px;"> TECHNOLOGY PLATFORM UTILIZATION</span></h6>
+                        <ul class="mt-4 ">
+                            <li>Extensive experience with multiple ATS, CRM and
+                                VMS systems.</li>
+                            <li class="mt-4">Best Practice and A.I. base Candidate Sourcing and
+                                metrics management.</li>
+                            <li class="mt-4">Optimal Candidate Engagement Modeling.</li>
+                            <li class="mt-4">Referral Program Optimization and Enhancements.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 style="text-align: center;background-color: #932e32;color: #fff;padding: 12px;"><span style="font-size: 19px;">ENGAGEMENT MODELS</span></h6>
+                        <ul class="mt-4 ">
+                            <li>Review of current state and going forward
+                                recommendations.</li>
+                            <li class="mt-4">Financial Impact of Multiple and Optimized
+                                Solutions.</li>
+                            <li class="mt-4">Implementation Management and Oversight.</li>
+                            <li class="mt-4">Change Management governance and impact
+                                assessments.</li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>
+    </div>
+
+
+  <!---------------------------------banner4---------------------->
+    <div class="banner4" style="background-image:url(img//Group\ 155.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+
+
+    <div class="container section5" id="hr">
+        <div class="row">
+        <!-- <div class="col-lg-1"></div> -->
+        <div class="col-lg-12">
+            <h3 class="text-center heading">HR Consulting, Employer of Record and
+                Payrolling Services</h3>
+            <div class="mt-4 ">
+            <p>We have significant experience managing and consulting with international clients covering best practice
+                HR management for India based companies. Our consulting services offer an “actual practitioner” approach
+                to HR setup and management in India, vs. large consulting company “high level – high price” generalizations
+                regarding best practices.</p>
+            <p class="mt-4">TalentBeacon also offers India based Employer of Record Services and Payrolling services to manage small to
+                large employee groups. We cover best practice service delivery, government regulatory compliance, tax.</p>
+            <p class="mt-4">We use simple yet sophisticated HR service technology to manage and engage with our employees and ensure all documentation and record
+              keeping is updated and available to our employees and clients.</p>
+              </div>
+        </div>
+        <!-- <div class="col-lg-1"></div> -->
+    </div>
+    </div>
+
+
+    <!----------------------------banner5--------------------->
+    <div class="banner5" style="background-image:url(img/Mask\ Group\ 17.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+
+    <div class="container section6" id="supp">
+        <div class="row">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12">
+                <h1 class="text-center heading">Supplemental Service</h1>
+                <div class="mt-4 ">
+                <p>TalentBeacon offers supplemental support services which are enormously beneficial for new companies'
+                    navigation India's various complexities. Our knowledge base and consulting services can help with guidance
+                    with:</p>
+                    <ul>
+                      <li>Best domestic and international banking
+                          relationships.
+                          </li>
+                      <li class="mt-4">Accounting firm relationships.</li>
+                      <li class="mt-4">Law Firm Relationships.</li>
+                      <li class="mt-4">M&A Relationships.
+                      </li>
+                  <li class="mt-4">1st, 2nd and 3rd tier city office selection and talent
+                      locations 
+                      (+/- of each).</li>
+                  <li class="mt-4">Real Estate management relationships.</li>
+                  </ul>
+              </div>
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>
+    </div>
+
+
+    <div class="banner6" style="background-image:url(img/Mask\ Group\ 18.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+
+    <div class="container clients_section" id="client">
+        <h1 class="text-center heading">Representative Clients</h1>
+        <div class="row mt-5">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12 text-center">
+                <div class="owl-carousel">
+                    <div class="item">
+                      <img src="img/Salesforce-Logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/Cardlytics-Logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/MasterCard_early_1990s_logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/1200px-Logo_Merck_KGaA_2015.svg.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/citrix-logo-png-transparent.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/new-cisco-logo-png-1.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/Bridgewater_Associates.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/2560px-Westinghouse_logo_and_wordmark.svg.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/2560px-MetLife_logo.svg.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                     <img src="img/Johnsons-Baby-Logo.png" alt="" class="w-75">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <div class="row mt-5">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12 text-center">
+                <div class="owl-carousel carousel_two">
+                    <div class="item">
+                      <img src="img/Verizon_2015_logo_-vector.svg.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/images.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/TATA_Consultancy_Services_Logo_blue.svg.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/Polycom_logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/Bank-of-America-Logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/microsoft-logo-4.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/Honeywell-Logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/324-3249479_deloitte-logo-png-transparent-monitor-deloitte-transparent-logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                      <img src="img/Sprint-logo.png" alt="" class="w-75">
+                    </div>
+                    <div class="item">
+                     <img src="img/Siemens-logo.png" alt="" class="w-75">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>
+    </div>
+    <div class="banner9" style="background-image:url(img/client_banner.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+
+
+<section>
+    <div class="container leadership_section" id="leader">
+      <h1 class="text-center heading">Leadership</h1>
+      <div class="row mt-4">
+        <!-- <div class="col-lg-1"></div> -->
+        <div class="col-lg-12">
+           <div class="row">
+            <div class="col-lg-4">
+              <div class="card text-center leader_card">
+                <img src="img/mark.png" alt="">
+                <h5 style="color: #17309e;" class=""><b>Mark Anderson</b></h5>
+                <h5>President</h5>
+                <a class="knowmore_btn" id="myBtn">Know More</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center leader_card">
+                <img src="img/vik.png" alt="">
+                <h5 style="color: #17309e;" class=""><b>Vikranth Benedict</b></h5>
+                <h5>Managing Director</h5>
+                <a class="knowmore_btn" id="myBtn1">Know More</a>
+          </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center leader_card">
+                <img src="img/mark.png" alt="">
+                <h5 style="color: #17309e;" class=""><b>Tanuj</b></h5>
+                <h5>Director - Global Operations</h5>
+                <a class="knowmore_btn" id="myBtn2">Know More</a>
+              </div>
+            </div>
+           </div>
+        </div>
+        <!-- <div class="col-lg-1"></div> -->
+      </div>
+    </div>
+  </section>
+  <div class="banner7" style="background-image:url(img/leadership_banner.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+  
+
+<section>
+    <div class="container blogs_section" id="work">
+      <h1 class="text-center heading">Blogs</h1>
+     <div class="row">
+      <!-- <div class="col-lg-1"></div> -->
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card text-center">
+              <img src="img/blog1.png" alt="" style="position: relative;">
+              <p class="circle ">26-Jan</p>
+              <h5 class=""><b>HR Counsulting & Payroll
+                services in India</b>
+                  </h5>
+              <!-- <p style="font-family: , sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus.</p> -->
+              <!-- <a href="#" class="know_more">Know More</a> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card text-center">
+              <img src="img/blog2.png" alt="" style="position: relative;">
+              <p class="circle ">02-Oct</p>
+              <h5 class=""><b>Technology and Engagement
+                Models</b>                
+                  </h5>
+              <!-- <p style="font-family: , sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus.</p> -->
+              <!-- <a href="#" class="know_more">Know More</a> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card text-center">
+              <img src="img/blog3.png" alt="" style="position: relative;">
+              <p class="circle ">16-Nov</p>
+              <h5 class=""><b>India Based Recruitment
+                Support</b>
+                  </h5>
+              <!-- <p style="font-family: , sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus.</p> -->
+              <!-- <a href="#" class="know_more">Know More</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-lg-1"></div> -->
+     </div>
+    </div>
+  </section>
+
+  <div class="banner8" style="background-image:url(img/blogs_banner.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+   
+
+    <section class=""style="background-image: url(img/worldmap.png);padding:60px 0px 60px 0px;background-position:center;background-size:cover;" id="contact">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-lg-1"></div> -->
+                <div class="col-lg-12">
+                    <h1 class="heading text-center">CONTACT US</h1>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name" class="">Name: * <span class="error" id="err-name"></span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="">Email: * <span class="error" id="err-name"></span></label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="">Subject: * <span class="error" id="err-name"></span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="">Company: * <span class="error" id="err-name"></span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="">Message: * <span class="error" id="err-name"></span></label>
+                                    <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                                </div>
+                                <button class="btn submit_btn">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-content">
+                                <div>
+                                    <strong class="">US OFFICE:</strong>
+                                    <p class="">445 Park Avenue, 9th Floor<br>
+                                    New York, NY 10022, United States.
+                                    </p>
+                                </div>
+                                <div class="mt-5" style="font-size:19px;">
+                                    <a href="tel:" class="text-dark  " style="text-decoration: none;">Call Us: +1-888-697-8924</a><br>
+                                    <a href="mail-to:" class="text-dark  " style="text-decoration: none;">Mail Us: info@talentbeacon.net</a>
+                                </div>
+                                <div class="mt-5" style="font-size: 19px;">
+                                    <strong class="">INDIA OFFICE</strong>
+                                    <p class="">LVS Arcade, Madhapur, 71, Jubilee Enclave, <br>HITEC City, Hyderabad, India - 500081
+                                    </p>
+                                    <a href="tel:" class="text-dark " style="text-decoration: none;">CALL US: +91-404-916-0666</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-1"></div> -->
+            </div>
+           </div>
+    </section>
+    <div class="banner9" style="background-image:url(img/last_banner.jpg);height:58vh;background-position:center;background-size:cover;background-attachment: fixed;"></div>
+
+
+<!----------------------footer----------------------->
+<footer class="footer_section ">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12 line">
+                <div class="row">
+                    <div class="col-lg-4 footer_content">
+                        <img src="img/logo.png" width="100%">
+                        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed temporibus, ducimus placeat repellendus blanditiis unde, cumque molestias inventore non aperiam nulla error amet praesentium eveniet!</p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-3 footer_links">
+                        <strong class="colortxt" style="font-size: 19px;">Get Involved</strong>
+                        <p>About Us</p>
+                        <p>Contact Us</p>
+                        <p>Disclaimer</p>
+                        <p>Terms and conditions</p>
+                    </div>
+                    <div class="col-lg-4 footer_social">
+                        <strong class="colortxt" style="font-size: 19px;">Get Connected</strong>
+                        <ul class="team-social1">
+                            <li class="icon-team1"><a href="#"><img src="img/facebook.png" alt=""></a></li>
+                            <li class="icon-team1"><a href="#"><img src="img/twitter.png" alt=""></a></li>
+                            <li class="icon-team1"><a href="#"><img src="img/pinterest.png" alt=""></a></li>
+                            <li class="icon-team1"><a href="#"><img src="img/instagram.png" alt=""></a></li>
+                        </ul>	
+                        <div class="social_media">
+                            <h5 class="mt-4">Subscribe to Our Newsletter</h5>
+                            <div class="form-newsletter mt-4">
+                              <div class="input-group mb-4">
+                                  <input type="text" class="form-control" placeholder="Your Email Address">
+                                  <span class="input-group-text"> Subscribe </span>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>
+    </div>
+  </footer>
+<footer class="footer_copy ">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p style="margin-bottom: 0px;"><span><img src="img/blacklogo.png" alt=""></span>Copyright 2022 - All rights Received</p>
+                    </div>
+                    <div class="col-lg-6 prodigit">
+                        <p style="margin-bottom: 0px;text-align: end;">Designed And Developed By<span><a href="https://www.prodigit.in/"><img src="img/prodigit.png" alt=""></a></span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>
+      
+    </footer>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content  scale-in-center">
+    <span class="close">&times;</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla ducimus enim obcaecati quia neque deserunt minima aspernatur laboriosam similique soluta debitis pariatur maxime, architecto quidem repellendus excepturi voluptas laborum. Qui asperiores quo ab a nisi architecto dolorum iste quibusdam unde fuga in nemo esse tenetur temporibus cupiditate mollitia saepe provident deleniti inventore harum perspiciatis iure, eaque optio consequatur. Et, voluptatem? Provident, sapiente inventore nesciunt quis recusandae architecto consequatur quidem pariatur voluptate hic praesentium veniam minima officia officiis sint at quo animi, nisi, sunt nostrum excepturi maxime. Debitis officiis necessitatibus unde voluptatum adipisci assumenda, similique soluta sequi eos nisi autem!</p>
+  </div>
+
+</div>
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content  scale-in-center">
+    <span class="close1">&times;</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla ducimus enim obcaecati quia neque deserunt minima aspernatur laboriosam similique soluta debitis pariatur maxime, architecto quidem repellendus excepturi voluptas laborum. Qui asperiores quo ab a nisi architecto dolorum iste quibusdam unde fuga in nemo esse tenetur temporibus cupiditate mollitia saepe provident deleniti inventore harum perspiciatis iure, eaque optio consequatur. Et, voluptatem? Provident, sapiente inventore nesciunt quis recusandae architecto consequatur quidem pariatur voluptate hic praesentium veniam minima officia officiis sint at quo animi, nisi, sunt nostrum excepturi maxime. Debitis officiis necessitatibus unde voluptatum adipisci assumenda, similique soluta sequi eos nisi autem!</p>
+  </div>
+
+</div>
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content  scale-in-center">
+    <span class="close2">&times;</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla ducimus enim obcaecati quia neque deserunt minima aspernatur laboriosam similique soluta debitis pariatur maxime, architecto quidem repellendus excepturi voluptas laborum. Qui asperiores quo ab a nisi architecto dolorum iste quibusdam unde fuga in nemo esse tenetur temporibus cupiditate mollitia saepe provident deleniti inventore harum perspiciatis iure, eaque optio consequatur. Et, voluptatem? Provident, sapiente inventore nesciunt quis recusandae architecto consequatur quidem pariatur voluptate hic praesentium veniam minima officia officiis sint at quo animi, nisi, sunt nostrum excepturi maxime. Debitis officiis necessitatibus unde voluptatum adipisci assumenda, similique soluta sequi eos nisi autem!</p>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="vendors/jquery.min.js"></script>
+<script src="owlcarousel/owl.carousel.js"></script>
+<script>
+    var owl = $('.leadership_carousel');
+    owl.owlCarousel({
+      margin: 10,
+      loop: true,
+      autoplayHoverPause:true,
+      autoplay: true,
+      autoplayTimeout:1500,
+      pagination: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        },
+        1400: {
+          items: 3
+        }
+      }
+    })
+  </script>
+
+<script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      margin: 10,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout:1500,
+      autoplayHoverPause:true,
+      pagination: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 5
+        },
+        1400: {
+          items: 6
+        }
+      }
+    })
+  </script>
+
+<script>
+    function scrollNav() {
+  $('ul.slimmenu-01 a').click(function(){
+    $(".active").removeClass("active");     
+    $(this).addClass("active");
+    
+  });
+}
+scrollNav();
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal1");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn1");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close1")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal2");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn2");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close2")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  <script>
+      $(window).scroll(function(){
+          var sticky = $('.sticky-top'),
+              scroll = $(window).scrollTop();
+        
+          if (scroll >= 100) sticky.addClass('fixed');
+          else sticky.removeClass('fixed');
+        });
+
+  </script>
+  <script>
+      $(document).ready(function(){
+
+    	$('a[href^="#"]').on('click',function (e) {
+    
+    	    e.preventDefault();
+    
+    	    var target = this.hash;
+    
+    	    var $target = $(target);
+    
+    	    $('html, body').stop().animate({
+    
+    	        'scrollTop': $target.offset().top - 80
+    
+    	    }, 900, 'swing', function () {
+    
+    	        // window.location.hash = target;
+    
+    	    });
+    
+    	});
+    
+    });
+  </script>
+</body>
+</html>
+
+
+<!-- style="background: rgb(217 168 156 / 50%);" -->

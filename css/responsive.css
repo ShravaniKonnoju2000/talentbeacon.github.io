@@ -1,0 +1,89 @@
+@media (max-width:1000px)
+{
+.section1
+{
+    padding: 20px 20px 20px 20px;
+}
+.section2
+{
+    padding: 20px 20px 20px 20px;
+}
+.section3
+{
+    padding: 20px 20px 20px 20px;
+}
+.section4
+{
+    padding: 20px 20px 20px 20px;
+}
+.section5
+{
+    padding: 20px 20px 20px 20px;
+}
+.section6
+{
+    padding: 20px 20px 20px 20px;
+}
+.clients_section
+{
+    padding: 20px 20px 20px 20px;
+}
+.leadership_section
+{
+    padding: 20px 20px 20px 20px;
+}
+.blogs_section
+{
+    padding: 20px 20px 20px 20px;
+}
+.form-content
+{
+    border: none;
+    padding-left: 20px;
+}
+.prodigit
+{
+    text-align: left;
+}
+.home-big-text {
+    font-size: 20px;
+    line-height: 20px;
+}
+#menu-wrap
+{
+    width: 45%;
+}
+ul.slimmenu li a
+{
+    font-size: 11px !important;
+}
+.ul.slimmenu li
+{
+   padding-left:0px;
+}
+.circle
+{
+    padding: 19px 13px;
+}
+h6
+{
+    font-size:10px;
+}
+.leader_card
+{
+    margin-top: 20px;
+}
+ul.slimmenu li a:before
+{
+    top: 6px;
+}
+p
+{
+    font-size: 15px;
+}
+.heading
+{
+    font-size: 31px;
+}
+}
+
